@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Video de fondo */
+#video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenido inicial */
+.contenido {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Botón */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cc5500;
+}
+
+/* Mensaje oculto */
+.mensaje {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* Sección extra para hacer scroll */
+.seccion {
+    display: none;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Cuando el mensaje aparece, se muestra la sección para hacer scroll */
+.mensaje:has(p) + .seccion {
+    display: block;
+}
