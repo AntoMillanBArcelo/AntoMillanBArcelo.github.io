@@ -9,31 +9,50 @@
 </head>
 <body>
 
-    <!-- Video de fondo -->
-    <video autoplay loop muted id="video-bg">
-        <source src="media/fondo.mp4" type="video/mp4">
-        Tu navegador no soporta videos.
-    </video>
-
-    <!-- Contenido principal -->
     <div class="contenido">
-        <h1>Hola, me llamo Antonio Millán</h1>
+        <video id="video-bg" autoplay muted loop>
+            <source src="media/fondo.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <h1>Hola, me llamo <span id="rojo">Antonio Millán</span></h1>
         <h2>Soy un desarrollador web</h2>
         <button id="btnMostrar">Ver mi trabajo</button>
     </div>
 
-    <!-- Mensaje oculto -->
-    <div class="mensaje">
-        <p>Hola</p>
-    </div>
-
-    <!-- Sección con más contenido (para hacer scroll) -->
+    <!-- Sección con más contenido -->
     <div class="seccion">
-        <h2>Más contenido aquí...</h2>
-        <p>Este es un ejemplo de contenido adicional después del mensaje.</p>
+        <!-- Video de fondo para la sección -->
+        <video id="video-bg" autoplay muted loop>
+            <source src="media/fondo2.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+
+        <!-- Menú de navegación dentro de la sección -->
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección dividida: izquierda con texto, derecha con imágenes -->
+        <div class="contenido-dividido">
+            <div class="izquierda">
+                <h2>Sobre mí</h2>
+                <p>Aquí puedes escribir un poco sobre ti, lo que haces, tus intereses, etc.</p>
+            </div>
+            <div class="derecha">
+                <img src="https://via.placeholder.com/300" alt="Imagen 1">
+                <img src="https://via.placeholder.com/300" alt="Imagen 2">
+                <img src="https://via.placeholder.com/300" alt="Imagen 3">
+            </div>
+        </div>
+    
+        <!-- Contenido adicional -->
+        <div class="contenido-extra">
+            <p>Contenido extra...</p>
+        </div>
     </div>
-
-
 
 </body>
 </html>
